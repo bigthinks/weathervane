@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weather Vane</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <description>Weather Vane - see your constituent indicators from a distance</description>
+    <namespacePrefix>indicatorbar</namespacePrefix>
+    <types>
+        <members>Indicators_CTRL</members>
+        <members>Indicators_Service</members>
+        <members>Indicators_TEST</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>AccountIndicators</members>
+        <members>ContactIndicators</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>Indicator__mdt.Contains_Value__c</members>
+        <members>Indicator__mdt.Disabled_Color__c</members>
+        <members>Indicator__mdt.Display_Value__c</members>
+        <members>Indicator__mdt.Enabled_Color__c</members>
+        <members>Indicator__mdt.Entity__c</members>
+        <members>Indicator__mdt.Field_API_Name__c</members>
+        <members>Indicator__mdt.Grid_Order__c</members>
+        <members>Indicator__mdt.Type__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Indicator.Buffer</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Indicator__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Indicator__mdt-Indicator Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>36.0</version>
+</Package>
