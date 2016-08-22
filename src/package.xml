@@ -3,7 +3,6 @@
     <fullName>Weather Vane</fullName>
     <apiAccessLevel>Unrestricted</apiAccessLevel>
     <description>Weather Vane - see your constituent indicators from a distance</description>
-    <namespacePrefix>indicatorbar</namespacePrefix>
     <types>
         <members>Indicators_CTRL</members>
         <members>Indicators_Service</members>
