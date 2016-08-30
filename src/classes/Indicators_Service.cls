@@ -36,6 +36,9 @@ public class Indicators_Service {
             
         } else if(config.Type__c == 'Boolean') {
             enabled = (Boolean)field;
+        } else if(config.Type__c == 'Is Not Null') {
+            if(String.isNotBlank((String)field))
+        		enabled = true;
         } else if(config.Type__c == 'Greater Than') {
             if(field != null && String.isNotBlank(config.Contains_Value__c)) {
                 enabled = (Decimal.valueOf((String)field) > Decimal.valueOf(config.Contains_Value__c));
@@ -45,7 +48,7 @@ public class Indicators_Service {
                 enabled = (Decimal.valueOf((String)field) < Decimal.valueOf(config.Contains_Value__c));
             }
             
-        } else if(config.Type__c == 'Blank') {
+        } else if(config.Type__c == 'Blank Space') {
             enabled = false;
             display = false;
         }
