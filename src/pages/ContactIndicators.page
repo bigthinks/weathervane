@@ -12,7 +12,7 @@
         <apex:repeat value="{!indicators}" var="indicator">
             <div class="col-md-1">
                 <apex:outputPanel layout="_block" rendered="{!indicator.Display}">
-                    <img src="http://dabuttonfactory.com/button.png?t={!indicator.Value}&f=Calibri-Bold&ts=25&tc=fff&w=60&h=60&c=5&bgt=unicolored&bgc={!indicator.Color}"/>
+                    <img src="http://dabuttonfactory.com/button.png?t={!indicator.Value}&f=Calibri-Bold&ts=25&tc=fff&w=60&h=60&c=5&bgt=unicolored&bgc={!indicator.Color}" title="{!indicator.Hover}"/>
                 </apex:outputPanel>
             </div>
         </apex:repeat>

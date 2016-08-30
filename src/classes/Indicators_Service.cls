@@ -4,7 +4,7 @@ public class Indicators_Service {
         for(Indicator__mdt config : [SELECT DeveloperName, Grid_Order__c, 
                                      Field_API_Name__c, Enabled_Color__c, 
                                      Contains_Value__c, Display_Value__c, 
-                                     Disabled_Color__c, Type__c 
+                                     Disabled_Color__c, Type__c, Hover_Text__c 
                                      FROM Indicator__mdt 
                                      WHERE Entity__c = :sob.getSObjectType().getDescribe().getName()
                                      ORDER BY Grid_Order__c]) {
@@ -49,16 +49,17 @@ public class Indicators_Service {
             enabled = false;
             display = false;
         }
-        return new Indicator(config.Display_Value__c, enabled ? config.Enabled_Color__c : config.Disabled_Color__c, display);
+        return new Indicator(config.Display_Value__c, enabled ? config.Enabled_Color__c : config.Disabled_Color__c, display, config.Hover_Text__c);
     }
     
     public class Indicator {
         public string Color {get;set;}
         public string Value {get;set;}
         public Boolean Display {get;set;}
+        public string Hover {get;set;}
       
-        public Indicator(String value, String color, Boolean display) {
-            this.Value = value; this.Color = color; this.Display = display;
+        public Indicator(String value, String color, Boolean display, String hover) {
+            this.Value = value; this.Color = color; this.Display = display; this.Hover = hover;
         }
     }
 }

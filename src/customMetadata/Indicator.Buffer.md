@@ -24,11 +24,15 @@
     </values>
     <values>
         <field>Field_API_Name__c</field>
-        <value xsi:nil="true"/>
+        <value xsi:type="xsd:string">LastName</value>
     </values>
     <values>
         <field>Grid_Order__c</field>
         <value xsi:type="xsd:double">4.0</value>
+    </values>
+    <values>
+        <field>Hover_Text__c</field>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>Type__c</field>

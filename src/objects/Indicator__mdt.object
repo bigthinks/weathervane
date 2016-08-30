@@ -3,9 +3,10 @@
     <description>Individual indicators in the Weather Vane indicator strip.</description>
     <fields>
         <fullName>Contains_Value__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
-        <inlineHelpText>If the indicator type is &quot;Contains&quot;, the indicator will be enabled if the field specified in Field API Name contains this string. If the indicator type is &quot;greater than&quot;, the indicator will be enabled if the field specified is greater than this val.</inlineHelpText>
+        <inlineHelpText>If indicator type is &quot;Contains&quot;, indicator will be enabled if the field specified in Field API Name contains this string. If indicator type is &quot;greater than&quot;/&quot;less than&quot;, indicator will be enabled if the field specified is greater than/less than this val.</inlineHelpText>
         <label>Compare Value</label>
         <length>255</length>
         <required>false</required>
@@ -15,6 +16,7 @@
     <fields>
         <fullName>Disabled_Color__c</fullName>
         <defaultValue>&quot;grey&quot;</defaultValue>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
         <inlineHelpText>If the indicator criteria are not met, it will be displayed in this color. Usually a greyed out version is appropriate.</inlineHelpText>
@@ -26,6 +28,7 @@
     </fields>
     <fields>
         <fullName>Display_Value__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
         <inlineHelpText>The short text string to display on the indicator.</inlineHelpText>
@@ -37,6 +40,7 @@
     </fields>
     <fields>
         <fullName>Enabled_Color__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
         <inlineHelpText>If the indicator conditions ARE met, the indicator is displayed in this color. Supports HTML color names and hexcodes.</inlineHelpText>
@@ -48,6 +52,7 @@
     </fields>
     <fields>
         <fullName>Entity__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
         <label>Entity</label>
@@ -67,6 +72,7 @@
     </fields>
     <fields>
         <fullName>Field_API_Name__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
         <inlineHelpText>API Name of the field which drives this indicator.</inlineHelpText>
@@ -78,6 +84,7 @@
     </fields>
     <fields>
         <fullName>Grid_Order__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
         <inlineHelpText>Order of this indicator in the indicator grid.</inlineHelpText>
@@ -89,7 +96,20 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Hover_Text__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Hover text that will appear on the Indicator badge.</inlineHelpText>
+        <label>Hover Text</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Type__c</fullName>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
         <inlineHelpText>Select the type of indicator grid entry this should be. Contains uses the Contains Value field to check if the string is present. Boolean checks to see if the field is true or false. Blank adds a blank space in the grid, useful for separating indicators.</inlineHelpText>
@@ -101,14 +121,6 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Boolean</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Greater Than</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Less Than</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
