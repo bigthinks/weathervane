@@ -119,7 +119,7 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Blank Space</fullName>
+                <fullName>Blank</fullName>
                 <default>false</default>
             </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>

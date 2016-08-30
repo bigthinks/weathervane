@@ -36,6 +36,6 @@
     </values>
     <values>
         <field>Type__c</field>
-        <value xsi:type="xsd:string">Blank Space</value>
+        <value xsi:type="xsd:string">Blank</value>
     </values>
 </CustomMetadata>
