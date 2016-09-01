@@ -47,7 +47,6 @@ public class Indicators_Service {
             if(field != null && String.isNotBlank(config.Contains_Value__c)) {
                 enabled = (Decimal.valueOf((String)field) < Decimal.valueOf(config.Contains_Value__c));
             }
-
         } else if(config.Type__c == 'Blank') {
             enabled = false;
             display = false;

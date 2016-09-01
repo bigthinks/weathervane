@@ -37,5 +37,9 @@
         <members>Indicator__mdt-Indicator Layout</members>
         <name>Layout</name>
     </types>
+    <types>
+        <members>sldswv</members>
+        <name>StaticResource</name>
+    </types>
     <version>36.0</version>
 </Package>
