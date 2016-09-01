@@ -24,7 +24,7 @@
 </head>
 <body>
     <div class="weathervane">
-        <div class="slds-grid">
+        <div class="slds-grid slds-wrap">
             <apex:repeat value="{!indicators}" var="indicator">
                 <div class="slds-size--1-of-12">
                     <apex:outputPanel layout="_block" rendered="{!indicator.Display}">
