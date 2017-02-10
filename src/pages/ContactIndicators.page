@@ -1,5 +1,5 @@
 <apex:page standardController="Contact" extensions="Indicators_CTRL" applyHtmlTag="false" standardStylesheets="false" docType="html-5.0" showHeader="false" sidebar="false">
-<html>
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,6 +19,11 @@
             line-height: 60px;
             vertical-align: middle;
         }
+        #wv-sprite {
+            margin: 5px;
+            height: 60px;
+            width: 60px;
+        }
     </style>
     
 </head>
@@ -26,14 +31,31 @@
     <div class="weathervane">
         <div class="slds-grid slds-wrap">
             <apex:repeat value="{!indicators}" var="indicator">
-                <div class="slds-size--1-of-12">
-                    <apex:outputPanel layout="_block" rendered="{!indicator.Display}">
+                <div class="slds-size--1-of-12 {!IF(indicator.Color = "hide","slds-hide","")}">
+                    <apex:outputPanel layout="block" rendered="{!indicator.Display && indicator.iType = 'TEXT'}">
                         <div class="wv-button" style="background-color:{!indicator.Color};" title="{!indicator.Hover}">
                             {!indicator.Value}
                         </div>
                     </apex:outputPanel>
+                    
+                    <apex:outputPanel layout="block" rendered="{!indicator.Display && indicator.iType = 'CUSTOM_SPRITE'}">
+                        <span class="slds-icon_container" title="{!indicator.Hover}">
+                            <svg class="slds-icon slds-icon--large slds-icon-custom-{!indicator.Value}" id="wv-sprite" style="{!IF(ISBLANK(indicator.Color),"","background-color: " & indicator.Color & ";")}" aria-hidden="true">
+                                <use xlink:href="/resource/sldswv/assets/icons/custom-sprite/svg/symbols.svg#{!indicator.Value}"></use>
+                            </svg>
+                        </span>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel layout="block" rendered="{!indicator.Display && indicator.iType = 'STANDARD_SPRITE'}">
+                        <span class="slds-icon_container" title="{!indicator.Hover}">
+                            <svg class="slds-icon slds-icon--large slds-icon-standard-{!indicator.Value}" id="wv-sprite" style="{!IF(ISBLANK(indicator.Color),"","background-color: " & indicator.Color & ";")}" aria-hidden="true">
+                                <use xlink:href="/resource/sldswv/assets/icons/standard-sprite/svg/symbols.svg#{!indicator.Value}"></use>
+                            </svg>
+                        </span>
+                    </apex:outputPanel>
+
                 </div>
-            </apex:repeat>             
+            </apex:repeat>
         </div>
      </div>
 </body>

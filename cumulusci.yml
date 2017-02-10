@@ -1,0 +1,6 @@
+project:
+    name: Weathervane
+    package:
+        api_version: 38.0
+        name: Weathervane
+        namespace: indicatorbar

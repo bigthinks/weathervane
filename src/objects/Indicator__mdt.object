@@ -17,7 +17,7 @@
         <defaultValue>&quot;grey&quot;</defaultValue>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
-        <inlineHelpText>If the indicator criteria are not met, it will be displayed in this color. Usually a greyed out version is appropriate.</inlineHelpText>
+        <inlineHelpText>If the indicator criteria are not met, the indicator will be displayed in this color. Usually the HTML color value &apos;grey&apos; is appropriate. You can also use the special value &apos;hide&apos; to prevent any display when the criteria are not met.</inlineHelpText>
         <label>Disabled Color</label>
         <length>10</length>
         <required>false</required>
@@ -28,9 +28,9 @@
         <fullName>Display_Value__c</fullName>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
-        <inlineHelpText>The short text string to display on the indicator.</inlineHelpText>
+        <inlineHelpText>A short text string (4 chars max) to display on the indicator, OR the name of an SLDS icon from the Standard or Custom sets - see available icons here: https://www.lightningdesignsystem.com/icons/</inlineHelpText>
         <label>Display Value</label>
-        <length>4</length>
+        <length>35</length>
         <required>false</required>
         <type>Text</type>
         <unique>false</unique>
@@ -39,7 +39,7 @@
         <fullName>Enabled_Color__c</fullName>
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
-        <inlineHelpText>If the indicator conditions ARE met, the indicator is displayed in this color. Supports HTML color names and hexcodes.</inlineHelpText>
+        <inlineHelpText>If the indicator conditions ARE met, the indicator is displayed in this color. Supports HTML color names and hexcodes. If using an SLDS icon, leave blank to use its default color, or enter a color name or hex value to override that color.</inlineHelpText>
         <label>Enabled Color</label>
         <length>10</length>
         <required>false</required>
@@ -51,19 +51,22 @@
         <externalId>false</externalId>
         <fieldManageability>SubscriberControlled</fieldManageability>
         <label>Entity</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Contact</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Account</fullName>
-                <default>false</default>
-            </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contact</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Account</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Field_API_Name__c</fullName>
@@ -105,27 +108,38 @@
         <fieldManageability>SubscriberControlled</fieldManageability>
         <inlineHelpText>Select the type of indicator grid entry this should be. Contains uses the Contains Value field to check if the string is present. Boolean checks to see if the field is true or false. Blank adds a blank space in the grid, useful for separating indicators.</inlineHelpText>
         <label>Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Contains</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Boolean</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Is Not Null</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Blank</fullName>
-                <default>false</default>
-            </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contains</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Boolean</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Is Not Null</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Greater Than</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Less Than</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Blank</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <label>Indicator</label>
     <pluralLabel>Indicators</pluralLabel>

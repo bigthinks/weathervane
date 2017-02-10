@@ -10,7 +10,11 @@
     @isTest public static void test_IndicatorsServiceCoverage() {
         Contact c = new Contact();
         List<Indicators_Service.Indicator> result = Indicators_Service.getIndicatorsForObject(c);
-        System.assertEquals(result.size(),1);
+        Integer indCount = [SELECT Count() FROM Indicator__mdt WHERE Entity__c = 'Contact' ];
+        System.assertEquals(result.size(),indCount);
     }
+
+    public static final String testSVG =
+        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none"><symbol id="account"></symbol><symbol viewBox="0 0 24 24" id="announcement"></symbol><symbol viewBox="0 0 24 24" id="answer_best"></symbol>';
     
 }

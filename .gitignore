@@ -14,3 +14,5 @@ unpackaged/zipped
 unpackaged_stage
 packaged
 .*.swp
+config/*
+*.sublime-*

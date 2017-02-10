@@ -41,5 +41,5 @@
         <members>sldswv</members>
         <name>StaticResource</name>
     </types>
-    <version>36.0</version>
+    <version>38.0</version>
 </Package>
