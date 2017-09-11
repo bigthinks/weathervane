@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disabled_Color__c</fullName>
+    <defaultValue>"grey"</defaultValue>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>If the indicator criteria are not met, the indicator will be displayed in this color. Usually the HTML color value 'grey' is appropriate. You can also use the special value 'hide' to prevent any display when the criteria are not met.</inlineHelpText>
+    <label>Disabled Color</label>
+    <length>10</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

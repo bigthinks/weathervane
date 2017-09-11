@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Select the type of indicator grid entry this should be. Contains uses the Contains Value field to check if the string is present. Boolean checks to see if the field is true or false. Blank adds a blank space in the grid, useful for separating indicators.</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contains</fullName>
+                <default>true</default>
+            </value>
+            <value>
+                <fullName>Boolean</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Is Not Null</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Greater Than</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Less Than</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Blank</fullName>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
